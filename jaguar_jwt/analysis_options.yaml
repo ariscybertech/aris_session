@@ -1,0 +1,24 @@
+# Dart analyzer configuration for jaguar_jwt.
+#
+# See guide here: https://www.dartlang.org/guides/language/analysis-options
+
+analyzer:
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
+
+linter:
+  rules:
+    # see catalog here: http://dart-lang.github.io/linter/lints/
+    - avoid_annotating_with_dynamic
+    - camel_case_types
+    # - only_throw_errors
+    - prefer_single_quotes
+    - public_member_api_docs
+    - sort_constructors_first
+    - type_annotate_public_apis
+
+# Note: the code actually satisify all the linter rules (not just the ones above),
+# except for these two:
+# - always_specify_types # this is the opposite of 'omit_local_variable_types'
+# - only_throw_errors # JwtException needs to change to satisify this rule
